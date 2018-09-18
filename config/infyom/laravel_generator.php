@@ -21,7 +21,7 @@ return [
 
         'routes'            => app_path('Http/routes.php'),
 
-        'api_routes'        => app_path('Http/api_routes.php'),
+        'api_routes'        => base_path('routes/api.php'),
 
         'request'           => app_path('Http/Requests/'),
 
@@ -93,7 +93,7 @@ return [
     |
     */
 
-    'api_prefix'  => 'api',
+    'api_prefix'  => '',
 
     'api_version' => 'v1',
 
