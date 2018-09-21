@@ -36,7 +36,8 @@
 			"database/factories"
 		],
 		"psr-4" : {
-			"App\\" : "app/"
+			"App\\" : "app/",
+			"Data\\" : "database/models"
 		}
 	},
 	"autoload-dev" : {

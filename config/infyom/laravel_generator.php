@@ -17,7 +17,7 @@ return [
 
         'datatables'        => app_path('DataTables/'),
 
-        'repository'        => app_path('Repositories/'),
+        'repository'        => database_path('models/'),
 
         'routes'            => base_path('routes/web.php'),
 
@@ -53,7 +53,7 @@ return [
 
     'namespace' => [
 
-        'model'             => 'App\Models',
+        'model'             => 'Data',
 
         'datatables'        => 'App\DataTables',
 
