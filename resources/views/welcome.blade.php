@@ -6,9 +6,6 @@
 
         <title>Laravel</title>
         
-        <!-- development version, includes helpful console warnings -->
-		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 		
@@ -17,7 +14,9 @@
     </head>
     <body>
         <div id="app">
-        	
+        	<passport-clients></passport-clients>
+			<passport-authorized-clients></passport-authorized-clients>
+			<passport-personal-access-tokens></passport-personal-access-tokens>
         </div>
         
         <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
