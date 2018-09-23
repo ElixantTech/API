@@ -13,14 +13,11 @@
 		"barryvdh/laravel-ide-helper" : "~2.5",
 		"doctrine/dbal" : "~2.3",
 		"fideloper/proxy" : "^4.0",
-		"infyomlabs/swagger-generator" : "dev-master",
 		"laravel/framework" : "~5.7",
 		"laravel/tinker" : "^1.0",
-		"laravelcollective/html" : "~5.6",
 		"predis/predis" : "~1.1",
 		"pusher/pusher-php-server" : "~3.2",
-		"jlapp/swaggervel" : "dev-master",
-		"infyomlabs/laravel-generator" : "dev-master"
+		"laravel/passport" : "~7.0"
 	},
 	"require-dev" : {
 		"beyondcode/laravel-dump-server" : "^1.0",
@@ -45,7 +42,6 @@
 			"Tests\\" : "tests/"
 		}
 	},
-	"extra" : {},
 	"scripts" : {
 		"post-root-package-install" : "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
 		"post-create-project-cmd" : "@php artisan key:generate",

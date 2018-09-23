@@ -41,10 +41,7 @@ class CreateCompaniesTable extends Migration
             $table->string('locale')->default('en-CA');
             $table->string('timezone')->default('America/Vancouver');
             
-            $table->string('public_key');
-            $table->string('private_key');
-            
-            $table->float('credit')->default('0.00');
+            $table->float('balance')->default('0.00');
             
             $table->timestamps();
             
