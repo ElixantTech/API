@@ -1,7 +1,5 @@
 <?php
 
-use Data\User;
-
 return [
 
     /*
@@ -45,7 +43,7 @@ return [
 
         'api' => [
             'driver' => 'passport',
-            'provider' => 'users',
+            'provider' => 'api',
         ],
     ],
 
@@ -69,7 +67,12 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => User::class,
+            'model' => Data\User::class,
+        ],
+    
+        'api' => [
+            'driver' => 'eloquent',
+            'model' => Data\Company::class,
         ],
 
         // 'users' => [

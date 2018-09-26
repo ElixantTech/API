@@ -14,39 +14,38 @@ class CreateCompaniesTable extends Migration
     public function up()
     {
         Schema::create('companies', function (Blueprint $table) {
-            $table->uuid('id');
-            
+            $table->string('id');
+    
             $table->enum('status', ['active', 'inactive', 'pending', 'rejected', 'disabled', 'terminated'])
-            ->default('pending');
-            
+                ->default('pending');
+    
             $table->string('name');
             $table->string('legal_name');
-            
+    
             $table->enum('company_type', ['Sole Proprietor', 'General Partnership', 'Corporation']);
             $table->string('jurisdiction')->nullable();
-            
+    
             $table->string('business_number')->nullable();
             $table->string('federal_tax_id')->nullable();
             $table->string('provincial_tax_id')->nullable();
             $table->string('payroll_tax_id')->nullable();
             $table->string('wcb_id');
-            
+    
             $table->string('street_address');
             $table->string('city');
             $table->string('province');
             $table->string('postal_code');
             $table->string('country_code');
-            
+    
             $table->string('language')->default('en');
             $table->string('locale')->default('en-CA');
             $table->string('timezone')->default('America/Vancouver');
-            
+    
             $table->float('balance')->default('0.00');
             
             $table->timestamps();
             
             $table->primary('id');
-            
         });
     }
 
