@@ -13,7 +13,10 @@
         "predis/predis" : "~1.1",
         "pusher/pusher-php-server" : "~3.2",
         "laravel/passport" : "~7.0",
-        "guzzlehttp/guzzle": "6.3.*"
+        "guzzlehttp/guzzle": "6.3.*",
+        "twilio/sdk": "5.9.*",
+        "stripe/stripe-php": "6.9.*",
+        "square/connect": "2.0.0.*"
     },
     "require-dev" : {
         "barryvdh/laravel-debugbar" : "~3.2",
