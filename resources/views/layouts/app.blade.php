@@ -1,51 +1,31 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+@extends('layouts.base')
 
-    <title>{{ config('app.name') }}</title>
+@section('template')
+    <section class="body" id="app">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+        <header class="header">
+            <div class="logo-container">
+                <a href="{{ url('dashboard') }}" class="logo">
+                    <img src="{{ asset('img/logo.png') }}" width="75" height="35" alt="{{ config('app.name') }}">
+                </a>
+            </div>
+        </header>
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+        <div class="inner-wrapper">
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+            <aside id="sidebar-left" class="sidebar-left">
 
-    <link rel="stylesheet" href="{{ asset('vendor/animate/animate.css') }}">
+            </aside>
 
-    <link rel="stylesheet" href="{{ asset('vendor/font-awesome/css/fontawesome-all.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('vendor/magnific-popup/magnific-popup.css') }}" />
-    <link rel="stylesheet" href="{{ asset('vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css') }}" />
+            <section role="main" class="content-body">
 
-    <!-- Styles -->
-    <link href="{{ asset('css/theme.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/skins/default.css') }}" rel="stylesheet">
+                <main class="py-4">
+                    @yield('content')
+                </main>
 
-    <script src="vendor/modernizr/modernizr.js"></script>
-</head>
-<body>
-    <div id="app">
+            </section>
 
+        </div>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
-
-    <script src="{{ asset('js/app.js') }}"></script>
-
-    <script src="{{ asset('vendor/jquery-browser-mobile/jquery.browser.mobile.js') }}"></script>
-    <script src="{{ asset('vendor/popper/umd/popper.min.js') }}"></script>
-    <script src="{{ asset('vendor/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
-    <script src="{{ asset('vendor/common/common.js') }}"></script>
-    <script src="{{ asset('vendor/nanoscroller/nanoscroller.js') }}"></script>
-    <script src="{{ asset('vendor/magnific-popup/jquery.magnific-popup.js') }}"></script>
-    <script src="{{ asset('vendor/jquery-placeholder/jquery-placeholder.js') }}"></script>
-
-    <script src="{{ asset('js/theme.js') }}"></script>
-
-    <script src="{{ asset('js/theme.init.js') }}"></script>
-</body>
-</html>
+    </section>
+@endsection
