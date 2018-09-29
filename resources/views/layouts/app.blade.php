@@ -6,7 +6,7 @@
         <header class="header">
             <div class="logo-container">
                 <a href="{{ url('dashboard') }}" class="logo">
-                    <img src="{{ asset('img/logo.png') }}" width="75" height="35" alt="{{ config('app.name') }}">
+                    <img src="{{ asset('img/logo-small.png') }}" width="75" height="35" alt="{{ config('app.name') }}">
                 </a>
             </div>
         </header>
