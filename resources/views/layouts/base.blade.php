@@ -39,7 +39,7 @@
 <script src="{{ asset('vendor/magnific-popup/jquery.magnific-popup.js') }}"></script>
 <script src="{{ asset('vendor/jquery-placeholder/jquery-placeholder.js') }}"></script>
 
-<script src="{{ asset('js/theme.jsx ') }}"></script>
+<script src="{{ asset('js/theme.js') }}"></script>
 
 <script src="{{ asset('js/theme.init.js') }}"></script>
 </body>
