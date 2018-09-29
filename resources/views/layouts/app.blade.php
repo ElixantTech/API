@@ -13,8 +13,6 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
 
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <link rel="stylesheet" href="{{ asset('vendor/animate/animate.css') }}">
 
     <link rel="stylesheet" href="{{ asset('vendor/font-awesome/css/fontawesome-all.min.css') }}" />
@@ -35,6 +33,8 @@
             @yield('content')
         </main>
     </div>
+
+    <script src="{{ asset('js/app.js') }}"></script>
 
     <script src="{{ asset('vendor/jquery-browser-mobile/jquery.browser.mobile.js') }}"></script>
     <script src="{{ asset('vendor/popper/umd/popper.min.js') }}"></script>
