@@ -32,16 +32,16 @@
 
 @yield('template')
 
-<script src="{{ asset('vendor/jquery-browser-mobile/jquery.browser.mobile.js') }}"></script>
-<script src="{{ asset('vendor/popper/umd/popper.min.js') }}"></script>
-<script src="{{ asset('vendor/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
-<script src="{{ asset('vendor/common/common.js') }}"></script>
-<script src="{{ asset('vendor/nanoscroller/nanoscroller.js') }}"></script>
-<script src="{{ asset('vendor/magnific-popup/jquery.magnific-popup.js') }}"></script>
-<script src="{{ asset('vendor/jquery-placeholder/jquery-placeholder.js') }}"></script>
+<script src="{{ asset('vendor/jquery-browser-mobile/jquery.browser.mobile.js') }}" defer></script>
+<script src="{{ asset('vendor/popper/umd/popper.min.js') }}" defer></script>
+<script src="{{ asset('vendor/bootstrap-datepicker/js/bootstrap-datepicker.js') }}" defer></script>
+<script src="{{ asset('vendor/common/common.js') }}" defer></script>
+<script src="{{ asset('vendor/nanoscroller/nanoscroller.js') }}" defer></script>
+<script src="{{ asset('vendor/magnific-popup/jquery.magnific-popup.js') }}" defer></script>
+<script src="{{ asset('vendor/jquery-placeholder/jquery-placeholder.js') }}" defer></script>
 
-<script src="{{ asset('js/theme.js') }}"></script>
+<script src="{{ asset('js/theme.js') }}" defer></script>
 
-<script src="{{ asset('js/theme.init.js') }}"></script>
+<script src="{{ asset('js/theme.init.js') }}" defer></script>
 </body>
 </html>
