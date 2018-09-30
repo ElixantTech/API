@@ -17,7 +17,7 @@
         <div class="form-group mb-3">
             <label for="password">Password:</label>
             <div class="input-group">
-                <input name="password" type="password" id="password" name="password" class="form-control form-control-lg" />
+                <input name="password" type="password" id="password" class="form-control form-control-lg" />
                 <span class="input-group-append">
                     <span class="input-group-text">
                         <i class="fas fa-key"></i>

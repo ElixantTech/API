@@ -47467,7 +47467,7 @@ exports = module.exports = __webpack_require__(45)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -47837,6 +47837,32 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "login-page-form",
@@ -47854,7 +47880,15 @@ var render = function() {
   return _c(
     "form",
     { attrs: { method: "post", action: _vm.destination, novalidate: "" } },
-    [_vm._m(0)]
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "clearfix" }),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _vm._m(2)
+    ]
   )
 }
 var staticRenderFns = [
@@ -47863,12 +47897,12 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group mb-3" }, [
-      _c("label", [_vm._v("E-Mail Address:")]),
+      _c("label", { attrs: { for: "email" } }, [_vm._v("E-Mail Address:")]),
       _vm._v(" "),
       _c("div", { staticClass: "input-group" }, [
         _c("input", {
           staticClass: "form-control form-control-lg",
-          attrs: { name: "email", type: "text" }
+          attrs: { name: "email", type: "email", id: "email" }
         }),
         _vm._v(" "),
         _c("span", { staticClass: "input-group-append" }, [
@@ -47876,6 +47910,51 @@ var staticRenderFns = [
             _c("i", { staticClass: "fas fa-envelope" })
           ])
         ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group mb-3" }, [
+      _c("label", { attrs: { for: "password" } }, [_vm._v("Password:")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "input-group" }, [
+        _c("input", {
+          staticClass: "form-control form-control-lg",
+          attrs: { name: "password", type: "password", id: "password" }
+        }),
+        _vm._v(" "),
+        _c("span", { staticClass: "input-group-append" }, [
+          _c("span", { staticClass: "input-group-text" }, [
+            _c("i", { staticClass: "fas fa-key" })
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-sm-8" }, [
+        _c("div", { staticClass: "checkbox-custom checkbox-default" }, [
+          _c("input", {
+            attrs: { id: "RememberMe", name: "rememberme", type: "checkbox" }
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "RememberMe" } }, [_vm._v("Remember Me")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-sm-4 text-right" }, [
+        _c(
+          "button",
+          { staticClass: "btn btn-primary mt-2", attrs: { type: "submit" } },
+          [_vm._v("Sign In")]
+        )
       ])
     ])
   }
