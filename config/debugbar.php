@@ -33,7 +33,7 @@ return [
      */
     'storage' => [
         'enabled'    => true,
-        'driver'     => 'file', // redis, file, pdo, custom
+        'driver'     => 'redis', // redis, file, pdo, custom
         'path'       => storage_path('debugbar'), // For file driver
         'connection' => null,   // Leave null for default connection (Redis/PDO)
         'provider'   => '' // Instance of StorageInterface for custom driver
@@ -108,20 +108,20 @@ return [
         'exceptions'      => true,  // Exception displayer
         'log'             => true,  // Logs from Monolog (merged in messages if enabled)
         'db'              => true,  // Show database (PDO) queries and bindings
-        'views'           => true,  // Views with their data
-        'route'           => true,  // Current route information
+        'views'           => false,  // Views with their data
+        'route'           => false,  // Current route information
         'auth'            => true, // Display Laravel authentication status
         'gate'            => true, // Display Laravel Gate checks
         'session'         => true,  // Display session data
         'symfony_request' => true,  // Only one can be enabled..
-        'mail'            => true,  // Catch mail messages
+        'mail'            => false,  // Catch mail messages
         'laravel'         => false, // Laravel version and environment
-        'events'          => false, // All events fired
+        'events'          => true, // All events fired
         'default_request' => false, // Regular or special Symfony request logger
         'logs'            => false, // Add the latest log messages
         'files'           => false, // Show the included files
         'config'          => false, // Display config settings
-        'cache'           => false, // Display cache events
+        'cache'           => true, // Display cache events
     ],
 
     /*

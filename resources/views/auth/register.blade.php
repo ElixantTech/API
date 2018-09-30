@@ -41,13 +41,18 @@
                             </a>
                         </li>
                     </ul>
-                    <form class="form-horizontal" novalidate="novalidate">
+                    {{ Form::open(['method' => 'post']) }}
                         <div class="tab-content">
                             <div id="w2-account" class="tab-pane p-3 active">
                                 <div class="form-group row">
-                                    <label class="col-sm-4 control-label text-sm-right pt-1" for="w2-username">Username</label>
-                                    <div class="col-sm-8">
+                                    <div class="col-md-6">
+                                        {{ Form::label('first_name', 'First Name', ['class' => 'col_form_label']) }}
+                                        {{ Form::text('first_name', old('first_name'), ['class' => 'form-control form-control-md', 'required' => 'required']) }}
                                         <input class="form-control" id="w2-username" name="username" required="" type="text">
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{ Form::label('last_name', 'Last Name', ['class' => 'col_form_label']) }}
+                                        {{ Form::text('last_name', old('last_name'), ['class' => 'form-control form-control-md', 'required' => 'required']) }}
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -92,7 +97,7 @@
                                 </div>
                             </div>
                         </div>
-                    </form>
+                    {{ Form::close() }}
                 </div>
                 <div class="card-footer">
                     <ul class="pager">
