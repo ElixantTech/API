@@ -59,7 +59,7 @@
 
                                 <div class="form-group row">
                                     <div class="col-md-8">
-                                        {{ Form::label('email', 'E-Mail Address', ['class' => 'col_form_label']) }}
+                                        {{ Form::label('email', 'E-Mail Address', ['class' => 'col_form_label ']) }}
                                         {{ Form::email('email', old('email'), ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
                                     </div>
                                     <div class="col-md-4">
@@ -98,7 +98,20 @@
                                 </div>
                             </div>
 
-                            <div id="signup-company" class="tab-pane p-3"></div>
+                            <div id="signup-company" class="tab-pane p-3">
+
+                                <div class="form-group row">
+                                    <div class="col-md-6">
+                                        {{ Form::label('company_legal_name', 'Company Legal Name', ['class' => 'col_form_label']) }}
+                                        {{ Form::text('company_legal_name', old('company_legal_name'), ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{ Form::label('company_name', 'Doing Business As', ['class' => 'col_form_label']) }}
+                                        {{ Form::text('company_name', old('company_name'), ['class' => 'form-control form-control-lg']) }}
+                                    </div>
+                                </div>
+
+                            </div>
 
 
                             <div id="signup-billing" class="tab-pane p-3"></div>
