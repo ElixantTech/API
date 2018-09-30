@@ -68,6 +68,16 @@
                                 <button type="submit" class="btn btn-primary mt-2">Sign In</button>
                             </div>
                         </div>
+
+                        <span class="mt-3 mb-3 line-thru text-center text-uppercase">
+								<span>or</span>
+							</span>
+
+                        <div class="mb-1 text-center">
+                            <a class="btn btn-facebook mb-3 ml-1 mr-1" href="#">Connect with <i class="fab fa-facebook-f"></i></a>
+                        </div>
+
+                        <p class="text-center">Don't have an account yet? <a href="pages-signup.html">Sign Up!</a></p>
                     </form>
                 </div>
             </div>
