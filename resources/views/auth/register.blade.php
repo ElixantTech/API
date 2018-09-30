@@ -47,12 +47,11 @@
                                 <div class="form-group row">
                                     <div class="col-md-6">
                                         {{ Form::label('first_name', 'First Name', ['class' => 'col_form_label']) }}
-                                        {{ Form::text('first_name', old('first_name'), ['class' => 'form-control form-control-md', 'required' => 'required']) }}
-                                        <input class="form-control" id="w2-username" name="username" required="" type="text">
+                                        {{ Form::text('first_name', old('first_name'), ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
                                     </div>
                                     <div class="col-md-6">
                                         {{ Form::label('last_name', 'Last Name', ['class' => 'col_form_label']) }}
-                                        {{ Form::text('last_name', old('last_name'), ['class' => 'form-control form-control-md', 'required' => 'required']) }}
+                                        {{ Form::text('last_name', old('last_name'), ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
                                     </div>
                                 </div>
                                 <div class="form-group row">
