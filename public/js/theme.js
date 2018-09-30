@@ -5038,7 +5038,9 @@ window.theme.fn = {
 }).apply(this, [window.theme, jQuery]);
 
 // Login Form
-(function (theme, $) {
+(function () {
+    'use strict';
+
     $("#login").validate({
         highlight: function( label ) {
             $(label).closest('.form-group').removeClass('has-success').addClass('has-error');
@@ -5057,4 +5059,4 @@ window.theme.fn = {
             }
         }
     });
-}).apply(this, [window.theme, jQuery]);
+}).apply(this, [jQuery]);
