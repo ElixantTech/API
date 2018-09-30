@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('layout')
+@section('template')
 <section class="body-sign" id="app">
     <div class="center-sign">
         <a class="logo float-left">
