@@ -20,21 +20,39 @@
                         <div class="row form-group mb-3">
                             <div class="col-md-6">
                                 <label class="col-form-label" for="first_name">First Name</label>
-                                <input type="text" name="first_name" id="first_name" class="form-control form-control-lg" value="{{ old('first_name') }}">
+                                <input type="text" name="first_name" id="first_name"
+                                       class="form-control form-control-lg" value="{{ old('first_name') }}">
                             </div>
                             <div class="col-md-6">
                                 <label class="col-form-label" for="last_name">First Name</label>
-                                <input type="text" name="last_name" id="last_name" class="form-control form-control-lg" value="{{ old('last_name') }}">
+                                <input type="text" name="last_name" id="last_name" class="form-control form-control-lg"
+                                       value="{{ old('last_name') }}">
                             </div>
                         </div>
 
+                        <div class="clearfix"></div>
+
+                        <div class="form-group mb-3">
+                            <label for="company_name">Company Name:</label>
+                            <input name="company_name" type="text" id="company_name"
+                                   class="form-control form-control-lg{{ $errors->has('company_name') ? ' is-invalid' : '' }}"
+                                   value="{{ old('email') }}" required/>
+
+                                @if ($errors->has('company_name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('company_name') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+
+                        <div class="clearfix"></div>
 
 
                         <div class="form-group mb-3">
                             <label for="email">E-Mail Address:</label>
                             <div class="input-group">
                                 <input name="email" type="email" id="email"
-                                       class="form-control form-control-lg{{ $errors->has('emal') ? ' is-invalid' : '' }}"
+                                       class="form-control form-control-lg{{ $errors->has('email') ? ' is-invalid' : '' }}"
                                        value="{{ old('email') }}" email required/>
                                 <span class="input-group-append">
                             <span class="input-group-text">
@@ -88,7 +106,8 @@
 							</span>
 
                         <div class="mb-1 text-center">
-                            <a class="btn btn-facebook mb-3 ml-1 mr-1" href="#">Connect with <i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-facebook mb-3 ml-1 mr-1" href="#">Connect with <i
+                                    class="fab fa-facebook-f"></i></a>
                         </div>
 
                         <p class="text-center">Don't have an account yet? <a href="pages-signup.html">Sign Up!</a></p>
