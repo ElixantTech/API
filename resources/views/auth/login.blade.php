@@ -21,9 +21,3 @@
     </div>
 </section>
 @endsection
-<script>
-    import Login from "./login";
-    export default {
-        components: {Login}
-    }
-</script>
