@@ -28,9 +28,7 @@
 </head>
 <body>
 
-<div class="app">
-    @yield('template')
-</div>
+@yield('template')
 
 <script src="{{ asset('js/app.js') }}"></script>
 
