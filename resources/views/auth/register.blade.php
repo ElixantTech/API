@@ -73,11 +73,11 @@
                                 <div class="form-group row">
                                     <div class="col-md-6">
                                         {{ Form::label('password', 'Password', ['class' => 'col_form_label']) }}
-                                        {{ Form::password('password', '', ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
+                                        {{ Form::password('password', ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
                                     </div>
                                     <div class="col-md-6">
                                         {{ Form::label('password_confirmation', 'Confirm Password', ['class' => 'col_form_label']) }}
-                                        {{ Form::password('password_confirmation', '', ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
+                                        {{ Form::password('password_confirmation', ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
                                     </div>
                                 </div>
                             </div>
