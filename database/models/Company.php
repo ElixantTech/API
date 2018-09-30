@@ -97,7 +97,7 @@ class Company extends Model
     /**
      * The User Relation
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany|User[]
      */
     public function users()
     {

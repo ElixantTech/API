@@ -34,4 +34,15 @@ final class CompanyObserver
         
         return null;
     }
+    
+    public function deleting(Company $company)
+    {
+        foreach ($company->users as $u)
+        {
+            $u->company_id = null;
+            $u->save();
+        }
+        
+        return null;
+    }
 }
