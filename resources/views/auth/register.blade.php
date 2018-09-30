@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('template')
-    <section class="body-sign" id="app" style="max-width: 850px !important;">
+    <section class="body-sign" id="app" style="max-width: 950px !important;">
         <div class="center-sign">
             <a class="logo float-left">
                 <img src="{{ asset('img/logo.png') }}" height="54"/>
