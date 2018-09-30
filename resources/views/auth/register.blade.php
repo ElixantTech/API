@@ -7,7 +7,7 @@
                 <img src="{{ asset('img/logo.png') }}" height="54"/>
             </a>
 
-            <section class="card-sign form-wizard" id="signup">
+            <section class="card-sign form-wizard mt-3" id="signup">
                 <div class="tabs">
                     <ul class="nav nav-tabs tabs-primary justify-content-end wizard-steps">
                         <li class="nav-item active">
