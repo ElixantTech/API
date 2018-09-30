@@ -9,7 +9,7 @@
 
             <section class="card-sign form-wizard" id="signup">
                 <div class="tabs">
-                    <ul class="nav nav-tabs nav-justify wizard-steps">
+                    <ul class="nav nav-tabs nav-justify wizard-steps tabs-right">
                         <li class="nav-item active">
                             <a href="#signup-account" data-toggle="tab" class="nav-link text-center">
                                 <span class="badge badge-primary">1</span>
