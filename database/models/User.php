@@ -55,8 +55,16 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password',
-        'remember_token'
+        'remember_token',
+        'company_id'
     ];
+    
+    /**
+     * All of the relationships to be touched.
+     *
+     * @var array
+     */
+    protected $touches = ['company'];
     
     /**
      * The attributes that should be cast to native types.
@@ -72,5 +80,15 @@ class User extends Authenticatable
     public function company()
     {
         return $this->belongsTo(Company::class, 'company_id');
+    }
+    
+    /**
+     * Whether or not the User has a configured company.
+     *
+     * @return bool
+     */
+    public function hasCompany()
+    {
+        return (bool) $this->company;
     }
 }
