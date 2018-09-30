@@ -43,7 +43,7 @@
                     </ul>
                     {{ Form::open(['method' => 'post']) }}
                         <div class="tab-content">
-                            <div id="w2-account" class="tab-pane p-3 active">
+                            <div id="signup-account" class="tab-pane p-3 active">
                                 <div class="form-group row">
                                     <div class="col-md-6">
                                         {{ Form::label('first_name', 'First Name', ['class' => 'col_form_label']) }}
