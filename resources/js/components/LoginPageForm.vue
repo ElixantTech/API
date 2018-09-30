@@ -16,7 +16,7 @@
 
 <script>
     export default {
-        name: "LoginPageForm",
+        name: "login-page-form",
         props: ["destination"]
     }
 </script>
