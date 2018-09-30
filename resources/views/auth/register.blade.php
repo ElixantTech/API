@@ -111,6 +111,19 @@
                                     </div>
                                 </div>
 
+                                <div class="clearfix"></div>
+
+                                <div class="form-group row">
+                                    <div class="col-md-8">
+                                        {{ Form::label('company_address', 'Company Mailing Address', ['class' => 'col_form_label']) }}
+                                        {{ Form::text('company_address', old('company_address'), ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
+                                    </div>
+                                    <div class="col-md-4">
+                                        {{ Form::label('company_city', 'City', ['class' => 'col_form_label']) }}
+                                        {{ Form::text('company_city', old('company_city'), ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
+                                    </div>
+                                </div>
+
                             </div>
 
 
