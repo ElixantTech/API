@@ -11,7 +11,7 @@
 
     <div class="header-right">
 
-        <header-search></header-search>
+        <HeaderSearchForm></HeaderSearchForm>
 
         <span class="separator"></span>
 

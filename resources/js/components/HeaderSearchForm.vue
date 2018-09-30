@@ -14,7 +14,3 @@
         name: "HeaderSearchForm"
     }
 </script>
-
-<style scoped>
-
-</style>
