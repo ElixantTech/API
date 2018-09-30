@@ -11,6 +11,6 @@
 
 <script>
     export default {
-        name: "HeaderSearchForm"
+        name: "header-search-form"
     }
 </script>

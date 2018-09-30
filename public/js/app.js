@@ -13902,7 +13902,7 @@ window.Vue = __webpack_require__(36);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('HeaderSearchForm', __webpack_require__(39));
+Vue.component('header-search-form', __webpack_require__(39));
 
 var app = new Vue({
   el: '#app'
@@ -47354,7 +47354,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    name: "HeaderSearchForm"
+    name: "header-search-form"
 });
 
 /***/ }),
