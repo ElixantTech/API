@@ -41,6 +41,7 @@
 <script src="{{ asset('vendor/jquery-placeholder/jquery-placeholder.js') }}"></script>
 
 <script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/theme.js') }}"></script>
 
 <script src="{{ asset('js/theme.init.js') }}"></script>
 </body>
