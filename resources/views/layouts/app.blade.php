@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('template')
-    <section class="body" id="app">
+    <section class="body">
 
         <header class="header">
             <div class="logo-container">
