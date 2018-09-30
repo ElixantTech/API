@@ -10,6 +10,7 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 Vue.component('header-search-form', require('./components/HeaderSearchForm.vue'));
+Vue.component('login-page-form', require('./components/LoginPageForm'));
 
 const app = new Vue({
     el: '#app'

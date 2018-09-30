@@ -1,77 +1,68 @@
-@extends('layouts.app')
+<section class="body-sign">
+    <div class="center-sign">
+        <a href="/" class="logo float-left">
+            <img src="img/logo.png" height="54" alt="Porto Admin" />
+        </a>
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+        <div class="panel card-sign">
+            <div class="card-title-sign mt-3 text-right">
+                <h2 class="title text-uppercase font-weight-bold m-0"><i class="fas fa-user mr-1"></i> Sign In</h2>
+            </div>
+            <div class="card-body">
+                <form action="index.html" method="post">
+                    <div class="form-group mb-3">
+                        <label>Username</label>
+                        <div class="input-group">
+                            <input name="username" type="text" class="form-control form-control-lg" />
+                            <span class="input-group-append">
+										<span class="input-group-text">
+											<i class="fas fa-user"></i>
+										</span>
+									</span>
+                        </div>
+                    </div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+                    <div class="form-group mb-3">
+                        <div class="clearfix">
+                            <label class="float-left">Password</label>
+                            <a href="pages-recover-password.html" class="float-right">Lost Password?</a>
+                        </div>
+                        <div class="input-group">
+                            <input name="pwd" type="password" class="form-control form-control-lg" />
+                            <span class="input-group-append">
+										<span class="input-group-text">
+											<i class="fas fa-lock"></i>
+										</span>
+									</span>
+                        </div>
+                    </div>
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="checkbox-custom checkbox-default">
+                                <input id="RememberMe" name="rememberme" type="checkbox"/>
+                                <label for="RememberMe">Remember Me</label>
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
+                        <div class="col-sm-4 text-right">
+                            <button type="submit" class="btn btn-primary mt-2">Sign In</button>
                         </div>
+                    </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                    <span class="mt-3 mb-3 line-thru text-center text-uppercase">
+								<span>or</span>
+							</span>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                    <div class="mb-1 text-center">
+                        <a class="btn btn-facebook mb-3 ml-1 mr-1" href="#">Connect with <i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-twitter mb-3 ml-1 mr-1" href="#">Connect with <i class="fab fa-twitter"></i></a>
+                    </div>
 
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                    <p class="text-center">Don't have an account yet? <a href="pages-signup.html">Sign Up!</a></p>
 
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                </form>
             </div>
         </div>
+
+        <p class="text-center text-muted mt-3 mb-3">&copy; Copyright 2017. All Rights Reserved.</p>
     </div>
-</div>
-@endsection
