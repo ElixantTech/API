@@ -39,6 +39,7 @@
 <script src="{{ asset('vendor/nanoscroller/nanoscroller.js') }}" defer></script>
 <script src="{{ asset('vendor/magnific-popup/jquery.magnific-popup.js') }}" defer></script>
 <script src="{{ asset('vendor/jquery-placeholder/jquery-placeholder.js') }}" defer></script>
+<script src="{{ asset('vendor/jquery-validation/jquery.validate.js') }}" defer></script>
 
 <script src="{{ asset('js/theme.js') }}" defer></script>
 

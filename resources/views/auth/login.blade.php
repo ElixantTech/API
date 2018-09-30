@@ -15,11 +15,11 @@
             </div>
 
             <div class="card-body">
-                <form method="post" novalidate>
+                <form method="post" id="login">
                     <div class="form-group mb-3">
                         <label for="email">E-Mail Address:</label>
                         <div class="input-group">
-                            <input name="email" type="email" id="email" class="form-control form-control-lg" />
+                            <input name="email" type="email" id="email" class="form-control form-control-lg" email required/>
                             <span class="input-group-append">
                     <span class="input-group-text">
                         <i class="fas fa-envelope"></i>
@@ -33,7 +33,7 @@
                     <div class="form-group mb-3">
                         <label for="password">Password:</label>
                         <div class="input-group">
-                            <input name="password" type="password" id="password" class="form-control form-control-lg" />
+                            <input name="password" type="password" id="password" class="form-control form-control-lg" required />
                             <span class="input-group-append">
                     <span class="input-group-text">
                         <i class="fas fa-key"></i>
