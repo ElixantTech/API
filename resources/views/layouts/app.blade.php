@@ -8,7 +8,7 @@
         <div class="inner-wrapper">
 
             <aside id="sidebar-left" class="sidebar-left">
-
+                @include('layouts.app-sidebar-left')
             </aside>
 
             <section role="main" class="content-body">
