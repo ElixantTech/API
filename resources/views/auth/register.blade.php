@@ -54,6 +54,20 @@
                                         {{ Form::text('last_name', old('last_name'), ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
                                     </div>
                                 </div>
+
+                                <div class="clearfix"></div>
+
+                                <div class="form-group row">
+                                    <div class="col-md-8">
+                                        {{ Form::label('email', 'E-Mail Address', ['class' => 'col_form_label']) }}
+                                        {{ Form::email('email', old('email'), ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
+                                    </div>
+                                    <div class="col-md-4">
+                                        {{ Form::label('phone', 'Phone Number', ['class' => 'col_form_label']) }}
+                                        {{ Form::tel('phone', old('phone'), ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
+                                    </div>
+                                </div>
+
                                 <div class="form-group row">
                                     <label class="col-sm-4 control-label text-sm-right pt-1" for="w2-password">Password</label>
                                     <div class="col-sm-8">
