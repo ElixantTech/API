@@ -47,9 +47,23 @@
 
                         <div class="clearfix"></div>
 
+                        <div class="row form-group mb-3">
+                            <div class="col-md-8">
+                                <label class="col-form-label" for="street_address">Company Address:</label>
+                                <input type="text" name="street_address" id="street_address"
+                                       class="form-control form-control-lg" value="{{ old('street_address') }}" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-form-label" for="city">City:</label>
+                                <input type="text" name="city" id="city" class="form-control form-control-lg"
+                                       value="{{ old('city') }}" required>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
 
                         <div class="form-group mb-3">
-                            <label for="email">E-Mail Address:</label>
+                            <label for="email">Company E-Mail Address:</label>
                             <div class="input-group">
                                 <input name="email" type="email" id="email"
                                        class="form-control form-control-lg{{ $errors->has('email') ? ' is-invalid' : '' }}"
