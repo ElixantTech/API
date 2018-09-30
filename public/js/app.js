@@ -13896,12 +13896,6 @@ __webpack_require__(13);
 
 window.Vue = __webpack_require__(36);
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
 Vue.component('header-search-form', __webpack_require__(39));
 
 var app = new Vue({
@@ -47186,9 +47180,9 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 var disposed = false
 var normalizeComponent = __webpack_require__(40)
 /* script */
-var __vue_script__ = __webpack_require__(41)
+var __vue_script__ = null
 /* template */
-var __vue_template__ = __webpack_require__(42)
+var __vue_template__ = __webpack_require__(41)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -47337,28 +47331,6 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 /* 41 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    name: "header-search-form"
-});
-
-/***/ }),
-/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
