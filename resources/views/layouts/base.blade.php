@@ -29,8 +29,6 @@
 
 @yield('template')
 
-<script src="{{ asset('js/app.js') }}"></script>
-
 <script src="{{ asset('vendor/jquery-browser-mobile/jquery.browser.mobile.js') }}"></script>
 <script src="{{ asset('vendor/popper/umd/popper.min.js') }}"></script>
 <script src="{{ asset('vendor/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
@@ -39,7 +37,7 @@
 <script src="{{ asset('vendor/magnific-popup/jquery.magnific-popup.js') }}"></script>
 <script src="{{ asset('vendor/jquery-placeholder/jquery-placeholder.js') }}"></script>
 
-<script src="{{ asset('js/theme.js') }}"></script>
+<script src="{{ asset('js/app.js') }}"></script>
 
 <script src="{{ asset('js/theme.init.js') }}"></script>
 </body>

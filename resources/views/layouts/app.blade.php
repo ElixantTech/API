@@ -29,7 +29,7 @@
 
                 <ul class="notifications">
                     <li>
-                        <a href="#" class="dropdown-toggle notifications-icon" data-toggle="dropdown">
+                        <a href="#" class="dropdown-toggle notification-icon" data-toggle="dropdown">
                             <i class="fas fa-tasks"></i>
                         </a>
 
