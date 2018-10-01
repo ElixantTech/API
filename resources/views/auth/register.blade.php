@@ -46,11 +46,11 @@
                             <div id="signup-account" class="tab-pane p-3 active">
                                 <div class="form-group row">
                                     <div class="col-md-6">
-                                        {{ Form::label('first_name', 'First Name', ['class' => 'col_form_label']) }}
+                                        {{ Form::label('first_name', 'First Name: <span class="required">*</span>', ['class' => 'col_form_label']) }}
                                         {{ Form::text('first_name', old('first_name'), ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
                                     </div>
                                     <div class="col-md-6">
-                                        {{ Form::label('last_name', 'Last Name', ['class' => 'col_form_label']) }}
+                                        {{ Form::label('last_name', 'Last Name: <span class="required">*</span>', ['class' => 'col_form_label']) }}
                                         {{ Form::text('last_name', old('last_name'), ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
                                     </div>
                                 </div>
@@ -59,11 +59,11 @@
 
                                 <div class="form-group row">
                                     <div class="col-md-8">
-                                        {{ Form::label('email', 'E-Mail Address', ['class' => 'col_form_label ']) }}
+                                        {{ Form::label('email', 'E-Mail Address: <span class="required">*</span>', ['class' => 'col_form_label ']) }}
                                         {{ Form::email('email', old('email'), ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
                                     </div>
                                     <div class="col-md-4">
-                                        {{ Form::label('phone', 'Phone Number', ['class' => 'col_form_label']) }}
+                                        {{ Form::label('phone', 'Phone Number: <span class="required">*</span>', ['class' => 'col_form_label']) }}
                                         {{ Form::tel('phone', old('phone'), ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
                                     </div>
                                 </div>
@@ -72,12 +72,14 @@
 
                                 <div class="form-group row">
                                     <div class="col-md-6">
-                                        {{ Form::label('password', 'Password', ['class' => 'col_form_label']) }}
+                                        {{ Form::label('password', 'Password: <span class="required">*</span>', ['class' => 'col_form_label']) }}
                                         {{ Form::password('password', ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
+                                        <p><code>Min-Length</code> is 8 Characters, must contain <code>Letters</code>, <code>Numbers</code> & at least one <code>Uppercase Letter</code></p>
                                     </div>
                                     <div class="col-md-6">
-                                        {{ Form::label('password_confirmation', 'Confirm Password', ['class' => 'col_form_label']) }}
+                                        {{ Form::label('password_confirmation', 'Confirm Password: <span class="required">*</span>', ['class' => 'col_form_label']) }}
                                         {{ Form::password('password_confirmation', ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
+                                        <p><code>MUST</code> match the other <code>Password</code> field.</p>
                                     </div>
                                 </div>
                             </div>

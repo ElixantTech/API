@@ -17,7 +17,7 @@
                 <div class="card-body">
                     <form method="post" id="login">
                         <div class="form-group mb-3">
-                            <label for="email">E-Mail Address:</label>
+                            <label for="email">E-Mail Address: <span class="required">*</span></label>
                             <div class="input-group">
                                 <input name="email" type="email" id="email"
                                        class="form-control form-control-lg{{ $errors->has('emal') ? ' is-invalid' : '' }}"
@@ -39,7 +39,7 @@
                         <div class="clearfix"></div>
 
                         <div class="form-group mb-3">
-                            <label for="password">Password:</label>
+                            <label for="password">Password: <span class="required">*</span></label>
                             <div class="input-group">
                                 <input name="password" type="password" id="password"
                                        class="form-control form-control-lg" required/>
