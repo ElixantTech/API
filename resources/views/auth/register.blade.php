@@ -50,7 +50,7 @@
                                         {{ Form::text('first_name', old('first_name'), ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
                                     </div>
                                     <div class="col-md-6">
-                                        {{ Form::label('last_name', 'Last Name:', ['class' => 'col_form_label required']) }}
+                                        {{ Form::label('last_name', 'Last Name:', ['class' => 'col_form_label']) }}
                                         {{ Form::text('last_name', old('last_name'), ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
                                     </div>
                                 </div>
@@ -59,7 +59,7 @@
 
                                 <div class="form-group row">
                                     <div class="col-md-8">
-                                        {{ Form::label('email', 'E-Mail Address:', ['class' => 'col_form_label ']) }}
+                                        {{ Form::label('email', 'E-Mail Address:', ['class' => 'col_form_label']) }}
                                         {{ Form::email('email', old('email'), ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
                                     </div>
                                     <div class="col-md-4">
@@ -74,7 +74,6 @@
                                     <div class="col-md-6">
                                         {{ Form::label('password', 'Password:', ['class' => 'col_form_label']) }}
                                         {{ Form::password('password', ['class' => 'form-control form-control-lg', 'required' => 'required']) }}
-                                        <p><code>Min</code> 8 Characters, and can only use the following: <code>a-zA-Z0-9_-?!@#&.,/</code></p>
                                     </div>
                                     <div class="col-md-6">
                                         {{ Form::label('password_confirmation', 'Confirm Password:', ['class' => 'col_form_label']) }}
