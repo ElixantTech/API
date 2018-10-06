@@ -71063,7 +71063,7 @@ $(document).ready(function () {
                 required: true,
                 email: true,
                 remote: {
-                    url: "http://" + location.host + "/validation/checkusername",
+                    url: "https://api.elixant.io/user/emailTaken",
                     type: "post",
                     data: {
                         email: function email() {
@@ -71072,11 +71072,7 @@ $(document).ready(function () {
                     },
                     dataFilter: function dataFilter(data) {
                         var json = JSON.parse(data);
-                        if (json.msg == "true") {
-                            return "\"" + "That username is taken" + "\"";
-                        } else {
-                            return 'true';
-                        }
+                        return json.exists;
                     }
                 }
             },
@@ -71090,6 +71086,11 @@ $(document).ready(function () {
             repeat_password: {
                 required: true,
                 equalTo: "#password"
+            }
+        },
+        messages: {
+            email: {
+                remote: "Oops! That E-Mail is being used already..."
             }
         },
         highlight: function highlight(element) {
