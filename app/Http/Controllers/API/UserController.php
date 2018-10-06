@@ -85,7 +85,10 @@ class UserController extends Controller
     {
         if (! $request->has('email'))
         {
-            return null;
+            return $this->output([
+                'email'     =>  null,
+                'exists'    =>  false
+            ]);
         }
         
         $user = User::whereEmail($email = $request->post('email'))->first();
