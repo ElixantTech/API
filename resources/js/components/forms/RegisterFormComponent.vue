@@ -86,9 +86,9 @@
                                                 <div class="heading"><h3 class="mb-0">Basic</h3></div>
                                                 <p>Ticket based support with access to the Knowledgebase and Community Forum.</p>
                                                 <div class="price"><h4>$0</h4></div>
-                                                <a class="btn btn-block btn-outline-primary select-plan" id="pkg-1">BUY
+                                                <button class="btn btn-block btn-outline-primary select-plan" id="pkg-1">BUY
                                                     SELECT
-                                                </a>
+                                                </button>
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-lg-4">
@@ -97,7 +97,7 @@
                                                 <div class="heading"><h3 class="mb-0">Standard</h3></div>
                                                 <p>Everything included with Basic, plus Live Chat from 11AM-7PM.</p>
                                                 <div class="price"><h4>$9.99</h4></div>
-                                                <a class="btn btn-block btn-primary select-plan" id="pkg-2">SELECTED</a>
+                                                <button class="btn btn-block btn-primary select-plan" id="pkg-2">SELECTED</button>
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-lg-4">
@@ -105,7 +105,7 @@
                                                 <div class="heading"><h3 class="mb-0">Priority</h3></div>
                                                 <p>Everything in previous plans, with priority response and 24/7 Phone Support.</p>
                                                 <div class="price"><h4>$19.99</h4></div>
-                                                <a class="btn btn-block btn-outline-primary select-plan" id="pkg-3">SELECT</a>
+                                                <button class="btn btn-block btn-outline-primary select-plan" id="pkg-3">SELECT</button>
                                             </div>
                                         </div>
                                     </div>
@@ -359,6 +359,75 @@
             });
         };
 
+        var autocomplete;
+
+        function initAutocomplete() {
+            // Create the autocomplete object, restricting the search to geographical
+            // location types.
+            autocomplete = new google.maps.places.Autocomplete(
+                /** @type {!HTMLInputElement} */(document.getElementById('address')),
+                {types: ['geocode']});
+
+            // When the user selects an address from the dropdown, populate the address
+            // fields in the form.
+            autocomplete.addListener('place_changed', fillInAddress);
+        }
+
+        function fillInAddress() {
+            // Get the place details from the autocomplete object.
+            var place = autocomplete.getPlace();
+
+            var street_num = '';
+            var street_name = '';
+
+            // Get each component of the address from the place details
+            // and fill the corresponding field on the form.
+            for (var i = 0; i < place.address_components.length; i++) {
+                var addressType = place.address_components[i].types[0];
+
+                if (addressType === 'street_number') {
+                    street_num = place.address_components[i]['short_name'];
+                }
+                elseif(addressType === 'route')
+                {
+                    street_name = place.address_components[i]['long_name']
+                }
+                elseif(addressType === 'locality')
+                {
+                    $("#city").val(place.address_components[i]['long_name']);
+                }
+                elseif (addressType === 'administrative_area_level_1')
+                {
+                    $("#province").val(place.address_components[i]['long_name']);
+                }
+                elseif (addressType === 'country')
+                {
+                    $("#country").val(place.address_components[i]['long_name']);
+                }
+                elseif (addressType === 'postal_code')
+                {
+                    $("#postal_code").val(place.address_components[i]['long_name']);
+                }
+
+                $("#address").val(street_num + ' ' + street_name)
+            }
+        }
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var geolocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+                var circle = new google.maps.Circle({
+                    center: geolocation,
+                    radius: position.coords.accuracy
+                });
+                autocomplete.setBounds(circle.getBounds());
+            });
+        }
+
+
         $('.select-plan').click(function () {
             console.log('click!');
 
@@ -369,5 +438,11 @@
                 $(this).attr('id')
             );
         });
+
+        $('#address').focus(function () {
+            var autocomplete = new google.maps.places.Autocomplete($(this));
+
+
+        })
     });
 </script>
