@@ -12,6 +12,7 @@
     "devDependencies": {
         "axios": "^0.18",
         "bootstrap": "^4.0.0",
+        "bootstrap-wizard": "^1.4.2",
         "cross-env": "^5.1",
         "jquery": "^3.2",
         "laravel-mix": "^2.0",
@@ -19,6 +20,20 @@
         "popper.js": "^1.12",
         "vue": "^2.5.7",
         "laravel-echo": "1.4.0",
-        "pnotify": "^4.0.0-alpha.4"
+        "pnotify": "^4.0.0-alpha.4",
+        "laravel-echo-server": "^1.4.2",
+        "jquery-browser": "^1.10.2-1",
+        "popper": "^1.0.1",
+        "bootstrap-datepicker": "^1.8.0",
+        "common": "^0.2.5",
+        "nanoscroller": "^0.8.7",
+        "magnific-popup": "^1.1.0",
+        "jquery-placeholder": "^2.3.1",
+        "jquery-validation": "^1.18.0",
+        "jquery.browser": "^0.1.0",
+        "pusher-js": "^4.3.1"
+    },
+    "dependencies": {
+        "card-js": "^1.0.13"
     }
 }

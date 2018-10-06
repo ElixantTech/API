@@ -24,6 +24,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/theme.css') }}" rel="stylesheet">
     <link href="{{ asset('css/skins/default.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/css/bootstrap-formhelpers.css" rel="stylesheet">
 
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -31,19 +32,12 @@
 </head>
 <body>
 
-@yield('template')
+<div id="app">
+    @yield('template')
+</div>
 
-<script src="{{ asset('vendor/jquery-browser-mobile/jquery.browser.mobile.js') }}" defer></script>
-<script src="{{ asset('vendor/popper/umd/popper.min.js') }}" defer></script>
-<script src="{{ asset('vendor/bootstrap-datepicker/js/bootstrap-datepicker.js') }}" defer></script>
-<script src="{{ asset('vendor/common/common.js') }}" defer></script>
-<script src="{{ asset('vendor/nanoscroller/nanoscroller.js') }}" defer></script>
-<script src="{{ asset('vendor/magnific-popup/jquery.magnific-popup.js') }}" defer></script>
-<script src="{{ asset('vendor/jquery-placeholder/jquery-placeholder.js') }}" defer></script>
-<script src="{{ asset('vendor/jquery-validation/jquery.validate.js') }}" defer></script>
-
-<script src="{{ asset('js/theme.js') }}" defer></script>
-
-<script src="{{ asset('js/theme.init.js') }}" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js" defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAod167Kl2mMa_ryQ6w9UqLib9si-SmzIA&libraries=places&callback=initAutocomplete"
+        async defer></script>
 </body>
 </html>
