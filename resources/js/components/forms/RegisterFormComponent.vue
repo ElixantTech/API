@@ -86,7 +86,7 @@
                                                 <div class="heading"><h3 class="mb-0">Basic</h3></div>
                                                 <p>Ticket based support with access to the Knowledgebase and Community Forum.</p>
                                                 <div class="price"><h4>$0</h4></div>
-                                                <a class="btn btn-block btn-outline-primary" id="btn-5" onclick="">BUY
+                                                <a class="btn btn-block btn-outline-primary select-plan" id="pkg-1">BUY
                                                     SELECT
                                                 </a>
                                             </div>
@@ -97,7 +97,7 @@
                                                 <div class="heading"><h3 class="mb-0">Standard</h3></div>
                                                 <p>Everything included with Basic, plus Live Chat from 11AM-7PM.</p>
                                                 <div class="price"><h4>$9.99</h4></div>
-                                                <a class="btn btn-block btn-primary" id="pkg-4">SELECTED</a>
+                                                <a class="btn btn-block btn-primary select-plan" id="pkg-2">SELECTED</a>
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-lg-4">
@@ -105,7 +105,7 @@
                                                 <div class="heading"><h3 class="mb-0">Priority</h3></div>
                                                 <p>Everything in previous plans, with priority response and 24/7 Phone Support.</p>
                                                 <div class="price"><h4>$19.99</h4></div>
-                                                <a class="btn btn-block btn-outline-primary" id="pkg-3">SELECT</a>
+                                                <a class="btn btn-block btn-outline-primary select-plan" id="pkg-3">SELECT</a>
                                             </div>
                                         </div>
                                     </div>
@@ -124,6 +124,8 @@
                                             the Premium package you will also get access to our 24-hour live Telephone Support Agents plus a guaranteed 1-Hour Response Time on all Support Tickets
                                             you submit, whereas with other packages responses are only guaranteed within 24 hours.</i>
                                         </p>
+
+                                        <input type="hidden" id="package_field" name="package" value="pkg2" />
 
                                     </div>
                                 </div>
@@ -351,14 +353,21 @@
         });
 
         let deselectPlans = function() {
-            $('#signup-subscription a .btn').each(function () {
+            $('.select-plan').each(function () {
+                console('unselect ' + $(this).attr('id'));
                 $(this).text('SELECT');
             });
         };
 
-        $('#signup-subscription .btn').click(function () {
+        $('.select-plan').click(function () {
+            console('click!');
+
             deselectPlans();
+
             $(this).text('SELECTED');
+            $('#plan-field').val(
+                $(this).attr('id')
+            );
         });
     });
 </script>

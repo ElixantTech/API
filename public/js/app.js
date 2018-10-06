@@ -71040,6 +71040,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 __webpack_require__(73);
 __webpack_require__(74);
@@ -71143,14 +71145,19 @@ $(document).ready(function () {
     });
 
     var deselectPlans = function deselectPlans() {
-        $('#signup-subscription a .btn').each(function () {
+        $('.select-plan').each(function () {
+            console('unselect ' + $(this).attr('id'));
             $(this).text('SELECT');
         });
     };
 
-    $('#signup-subscription .btn').click(function () {
+    $('.select-plan').click(function () {
+        console('click!');
+
         deselectPlans();
+
         $(this).text('SELECTED');
+        $('#plan-field').val($(this).attr('id'));
     });
 });
 
@@ -73153,8 +73160,9 @@ var staticRenderFns = [
                   _c(
                     "a",
                     {
-                      staticClass: "btn btn-block btn-outline-primary",
-                      attrs: { id: "btn-5", onclick: "" }
+                      staticClass:
+                        "btn btn-block btn-outline-primary select-plan",
+                      attrs: { id: "pkg-1" }
                     },
                     [
                       _vm._v(
@@ -73186,8 +73194,8 @@ var staticRenderFns = [
                   _c(
                     "a",
                     {
-                      staticClass: "btn btn-block btn-primary",
-                      attrs: { id: "pkg-4" }
+                      staticClass: "btn btn-block btn-primary select-plan",
+                      attrs: { id: "pkg-2" }
                     },
                     [_vm._v("SELECTED")]
                   )
@@ -73213,7 +73221,8 @@ var staticRenderFns = [
                   _c(
                     "a",
                     {
-                      staticClass: "btn btn-block btn-outline-primary",
+                      staticClass:
+                        "btn btn-block btn-outline-primary select-plan",
                       attrs: { id: "pkg-3" }
                     },
                     [_vm._v("SELECT")]
@@ -73237,7 +73246,16 @@ var staticRenderFns = [
                   " you will be billed for it upon registration\n                                        of your account, and will continue to be monthly. Your renewal date is TODAY, and you can change your support level at any time through\n                                        your Dashboard. Please note that fees paid for your support subscription however are non-refundable. You are guaranteed access to our community forum,\n                                        helpdesk and knowledgebase. With the Standard package you also get access to our Live-Help agents between 11AM and 7PM, 7-days a week; and with\n                                        the Premium package you will also get access to our 24-hour live Telephone Support Agents plus a guaranteed 1-Hour Response Time on all Support Tickets\n                                        you submit, whereas with other packages responses are only guaranteed within 24 hours."
                 )
               ])
-            ])
+            ]),
+            _vm._v(" "),
+            _c("input", {
+              attrs: {
+                type: "hidden",
+                id: "package_field",
+                name: "package",
+                value: "pkg2"
+              }
+            })
           ])
         ])
       ]
