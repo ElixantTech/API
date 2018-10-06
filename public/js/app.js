@@ -71141,6 +71141,16 @@ $(document).ready(function () {
             $('#signup').find(this.nextSelector)[newindex == totalTabs ? 'addClass' : 'removeClass']('hidden');
         }
     });
+
+    $('#signup-subscription .btn').click(function () {
+        var all = $('#signup-subscription').find('.btn');
+
+        $.each(all, function (index) {
+            $(index).text('SELECT');
+        });
+
+        $(this).text('SELECTED');
+    });
 });
 
 /***/ }),
@@ -73143,7 +73153,7 @@ var staticRenderFns = [
                     "button",
                     {
                       staticClass: "btn btn-block btn-outline-primary",
-                      attrs: { type: "submit" }
+                      attrs: { id: "btn-5", onclick: "" }
                     },
                     [
                       _vm._v(
@@ -73176,7 +73186,7 @@ var staticRenderFns = [
                     "button",
                     {
                       staticClass: "btn btn-block btn-primary",
-                      attrs: { type: "submit" }
+                      attrs: { id: "pkg-4" }
                     },
                     [_vm._v("SELECTED")]
                   )
@@ -73203,7 +73213,7 @@ var staticRenderFns = [
                     "button",
                     {
                       staticClass: "btn btn-block btn-outline-primary",
-                      attrs: { type: "submit" }
+                      attrs: { id: "pkg-3" }
                     },
                     [_vm._v("SELECT")]
                   )

@@ -86,7 +86,7 @@
                                                 <div class="heading"><h3 class="mb-0">Basic</h3></div>
                                                 <p>Ticket based support with access to the Knowledgebase and Community Forum.</p>
                                                 <div class="price"><h4>$0</h4></div>
-                                                <button type="submit" class="btn btn-block btn-outline-primary">BUY
+                                                <button class="btn btn-block btn-outline-primary" id="btn-5" onclick="">BUY
                                                     SELECT
                                                 </button>
                                             </div>
@@ -97,7 +97,7 @@
                                                 <div class="heading"><h3 class="mb-0">Standard</h3></div>
                                                 <p>Everything included with Basic, plus Live Chat from 11AM-7PM.</p>
                                                 <div class="price"><h4>$9.99</h4></div>
-                                                <button type="submit" class="btn btn-block btn-primary">SELECTED</button>
+                                                <button class="btn btn-block btn-primary" id="pkg-4">SELECTED</button>
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-lg-4">
@@ -105,7 +105,7 @@
                                                 <div class="heading"><h3 class="mb-0">Priority</h3></div>
                                                 <p>Everything in previous plans, with priority response and 24/7 Phone Support.</p>
                                                 <div class="price"><h4>$19.99</h4></div>
-                                                <button type="submit" class="btn btn-block btn-outline-primary">SELECT</button>
+                                                <button class="btn btn-block btn-outline-primary" id="pkg-3">SELECT</button>
                                             </div>
                                         </div>
                                     </div>
@@ -348,6 +348,16 @@
                 $signup_finish[newindex != totalTabs ? 'addClass' : 'removeClass']('hidden');
                 $('#signup').find(this.nextSelector)[newindex == totalTabs ? 'addClass' : 'removeClass']('hidden');
             }
-        })
+        });
+
+        $('#signup-subscription .btn').click(function () {
+            var all = $('#signup-subscription').find('.btn');
+
+            $.each(all, function (index) {
+                $(index).text('SELECT');
+            });
+
+            $(this).text('SELECTED');
+        });
     });
 </script>
