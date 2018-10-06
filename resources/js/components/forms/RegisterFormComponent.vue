@@ -370,11 +370,9 @@
                 $(this).attr('id')
             );
         });
-    });
 
-    var autocomplete;
+        var autocomplete;
 
-    function initAutocomplete() {
         // Create the autocomplete object, restricting the search to geographical
         // location types.
         autocomplete = new google.maps.places.Autocomplete(
@@ -398,45 +396,45 @@
         // When the user selects an address from the dropdown, populate the address
         // fields in the form.
         autocomplete.addListener('place_changed', fillInAddress);
-    }
 
-    function fillInAddress() {
-        // Get the place details from the autocomplete object.
-        var place = autocomplete.getPlace();
+        function fillInAddress() {
+            // Get the place details from the autocomplete object.
+            var place = autocomplete.getPlace();
 
-        var street_num = '';
-        var street_name = '';
+            var street_num = '';
+            var street_name = '';
 
-        // Get each component of the address from the place details
-        // and fill the corresponding field on the form.
-        for (var i = 0; i < place.address_components.length; i++) {
-            var addressType = place.address_components[i].types[0];
+            // Get each component of the address from the place details
+            // and fill the corresponding field on the form.
+            for (var i = 0; i < place.address_components.length; i++) {
+                var addressType = place.address_components[i].types[0];
 
-            if (addressType === 'street_number') {
-                street_num = place.address_components[i]['short_name'];
-            }
-            elseif(addressType === 'route')
-            {
-                street_name = place.address_components[i]['long_name']
-            }
-            elseif(addressType === 'locality')
-            {
-                $("#city").val(place.address_components[i]['long_name']);
-            }
-            elseif (addressType === 'administrative_area_level_1')
-            {
-                $("#province").val(place.address_components[i]['long_name']);
-            }
-            elseif (addressType === 'country')
-            {
-                $("#country").val(place.address_components[i]['long_name']);
-            }
-            elseif (addressType === 'postal_code')
-            {
-                $("#postal_code").val(place.address_components[i]['long_name']);
-            }
+                if (addressType === 'street_number') {
+                    street_num = place.address_components[i]['short_name'];
+                }
+                elseif(addressType === 'route')
+                {
+                    street_name = place.address_components[i]['long_name']
+                }
+                elseif(addressType === 'locality')
+                {
+                    $("#city").val(place.address_components[i]['long_name']);
+                }
+                elseif (addressType === 'administrative_area_level_1')
+                {
+                    $("#province").val(place.address_components[i]['long_name']);
+                }
+                elseif (addressType === 'country')
+                {
+                    $("#country").val(place.address_components[i]['long_name']);
+                }
+                elseif (addressType === 'postal_code')
+                {
+                    $("#postal_code").val(place.address_components[i]['long_name']);
+                }
 
-            $("#address").val(street_num + ' ' + street_name)
+                $("#address").val(street_num + ' ' + street_name)
+            }
         }
-    }
+    });
 </script>

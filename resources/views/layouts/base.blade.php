@@ -37,7 +37,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js" defer></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAod167Kl2mMa_ryQ6w9UqLib9si-SmzIA&libraries=places&callback=initAutocomplete"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAod167Kl2mMa_ryQ6w9UqLib9si-SmzIA&libraries=places"
         async defer></script>
 </body>
 </html>
