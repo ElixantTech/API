@@ -21,7 +21,7 @@
         "square/connect": "2.0.0.*",
         "twilio/sdk": "5.9.*",
         "barryvdh/laravel-debugbar" : "~3.2",
-        "barryvdh/laravel-ide-helper" : "~2.5",
+        "barryvdh/laravel-ide-helper" : "~2.5"
     },
     "require-dev" : {
         "beyondcode/laravel-dump-server" : "^1.0",
