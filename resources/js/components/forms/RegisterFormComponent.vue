@@ -353,8 +353,8 @@
         $('#signup-subscription .btn').click(function () {
             var list = $('#signup-subscription a .btn').find();
 
-            forEach (list, function (index) {
-                $(index).text('SELECT');
+            list.each(function (index) {
+                $(index).elem.text('SELECT');
             });
 
             $(this).text('SELECTED');
