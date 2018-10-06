@@ -71143,7 +71143,9 @@ $(document).ready(function () {
     });
 
     $('#signup-subscription .btn').click(function () {
-        $('#signup-subscription .btn').each(function (index) {
+        var list = $('#signup-subscription a .btn').find();
+
+        list.each(function (index) {
             $(index).text('SELECT');
         });
 
@@ -73148,7 +73150,7 @@ var staticRenderFns = [
                   ]),
                   _vm._v(" "),
                   _c(
-                    "button",
+                    "a",
                     {
                       staticClass: "btn btn-block btn-outline-primary",
                       attrs: { id: "btn-5", onclick: "" }
@@ -73181,7 +73183,7 @@ var staticRenderFns = [
                   ]),
                   _vm._v(" "),
                   _c(
-                    "button",
+                    "a",
                     {
                       staticClass: "btn btn-block btn-primary",
                       attrs: { id: "pkg-4" }
@@ -73208,7 +73210,7 @@ var staticRenderFns = [
                   ]),
                   _vm._v(" "),
                   _c(
-                    "button",
+                    "a",
                     {
                       staticClass: "btn btn-block btn-outline-primary",
                       attrs: { id: "pkg-3" }
