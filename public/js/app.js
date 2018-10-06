@@ -71146,13 +71146,13 @@ $(document).ready(function () {
 
     var deselectPlans = function deselectPlans() {
         $('.select-plan').each(function () {
-            console('unselect ' + $(this).attr('id'));
+            console.log('unselect ' + $(this).attr('id'));
             $(this).text('SELECT');
         });
     };
 
     $('.select-plan').click(function () {
-        console('click!');
+        console.log('click!');
 
         deselectPlans();
 
