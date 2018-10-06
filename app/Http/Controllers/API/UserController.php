@@ -93,7 +93,7 @@ class UserController extends Controller
         
         $user = User::whereEmail($email = $request->post('email'))->first();
         
-        if (! $user->exists)
+        if (! $user)
         {
             return $this->output([
                 'email'     =>  $email,
