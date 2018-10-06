@@ -71143,9 +71143,7 @@ $(document).ready(function () {
     });
 
     $('#signup-subscription .btn').click(function () {
-        var all = $('#signup-subscription').find('.btn');
-
-        $.each(all, function (index) {
+        $('#signup-subscription .btn').each(function (index) {
             $(index).text('SELECT');
         });
 
