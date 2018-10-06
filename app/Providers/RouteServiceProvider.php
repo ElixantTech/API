@@ -66,7 +66,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapApiRoutes()
     {
         Route::domain('api.elixant.io')
-             ->middleware('api')
+             ->middleware('api', 'cors')
              ->namespace($this->namespace . '\API')
              ->group(base_path('routes/api.php'));
     }
