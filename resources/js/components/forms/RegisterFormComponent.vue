@@ -368,6 +368,20 @@
                 /** @type {!HTMLInputElement} */(document.getElementById('address')),
                 {types: ['geocode']});
 
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var geolocation = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    var circle = new google.maps.Circle({
+                        center: geolocation,
+                        radius: position.coords.accuracy
+                    });
+                    autocomplete.setBounds(circle.getBounds());
+                });
+            }
+
             // When the user selects an address from the dropdown, populate the address
             // fields in the form.
             autocomplete.addListener('place_changed', fillInAddress);
@@ -413,20 +427,6 @@
             }
         }
 
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position) {
-                var geolocation = {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude
-                };
-                var circle = new google.maps.Circle({
-                    center: geolocation,
-                    radius: position.coords.accuracy
-                });
-                autocomplete.setBounds(circle.getBounds());
-            });
-        }
-
 
         $('.select-plan').click(function () {
             console.log('click!');
@@ -438,11 +438,5 @@
                 $(this).attr('id')
             );
         });
-
-        $('#address').focus(function () {
-            var autocomplete = new google.maps.places.Autocomplete($(this));
-
-
-        })
     });
 </script>
