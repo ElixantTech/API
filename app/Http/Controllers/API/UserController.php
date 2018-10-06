@@ -92,16 +92,16 @@ class UserController extends Controller
         
         if (! $user->exists)
         {
-            return response()->json([
+            return [
                 'email'     =>  $email,
                 'exists'    =>  false
-            ]);
+            ];
         }
     
-        return response()->json([
+        return [
             'email'     =>  $email,
             'exists'    =>  true,
             'user_id'   =>  $user->id
-        ]);
+        ];
     }
 }
