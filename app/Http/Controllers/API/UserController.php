@@ -92,16 +92,16 @@ class UserController extends Controller
         
         if (! $user->exists)
         {
-            return [
+            return $this->output([
                 'email'     =>  $email,
                 'exists'    =>  false
-            ];
+            ]);
         }
     
-        return [
+        return $this->output([
             'email'     =>  $email,
             'exists'    =>  true,
             'user_id'   =>  $user->id
-        ];
+        ]);
     }
 }

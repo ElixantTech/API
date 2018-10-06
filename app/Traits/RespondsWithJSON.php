@@ -15,8 +15,21 @@ namespace App\Traits;
  */
 trait RespondsWithJSON
 {
-    public function output($data = null)
+    public function output($data = [], $status = 200, $messge = 'OK')
     {
-    
+        $json = [
+            'status'    =>  $status,
+            'message'   =>  $messge,
+            'data'      =>  $data,
+            'timestamp' =>  time(),
+            'ipaddress' =>  request()->ip()
+        ];
+        
+        return response()
+            ->json($json)
+            ->withHeaders([
+                'Access-Control-Allow-Origin'   =>  '*',
+                'Access-Control-Allow-Methods'  =>  'GET, POST, PUT, DELETE, OPTIONS'
+            ]);
     }
 }

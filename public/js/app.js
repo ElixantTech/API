@@ -71072,7 +71072,7 @@ $(document).ready(function () {
                     },
                     dataFilter: function dataFilter(data) {
                         var json = JSON.parse(data);
-                        return json.exists;
+                        return json.data.exists;
                     }
                 }
             },
