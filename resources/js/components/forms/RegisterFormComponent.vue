@@ -250,6 +250,7 @@
 </style>
 
 <script>
+
     require('card-js');
     require('bootstrap-wizard');
     require('jquery-validation/dist/additional-methods')
