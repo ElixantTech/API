@@ -71142,13 +71142,14 @@ $(document).ready(function () {
         }
     });
 
-    $('#signup-subscription .btn').click(function () {
-        var list = $('#signup-subscription a .btn').find();
-
-        list.each(function (index) {
-            $(index).elem.text('SELECT');
+    var deselectPlans = function deselectPlans() {
+        $('#signup-subscription a .btn').each(function () {
+            $(this).text('SELECT');
         });
+    };
 
+    $('#signup-subscription .btn').click(function () {
+        deselectPlans();
         $(this).text('SELECTED');
     });
 });
