@@ -279,7 +279,7 @@
                             },
                             dataFilter: function (data) {
                                 var json = JSON.parse(data);
-                                return (!json.data.exists) ? true : false;
+                                return (!json.data.exists);
                             }
                         },
                     },
