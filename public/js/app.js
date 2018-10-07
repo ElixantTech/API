@@ -71042,6 +71042,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 __webpack_require__(73);
@@ -71053,6 +71054,12 @@ __webpack_require__(75);
 });
 
 $(document).ready(function () {
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-Token': $('meta[name="csrf_token"]').attr('content')
+        }
+    });
+
     var $signup_finish = $("#signup").find("ul.pager li.finish"),
         $signup_validator = $("#signup form").validate({
         rules: {
@@ -72966,6 +72973,7 @@ var render = function() {
               _vm._m(1),
               _vm._v(" "),
               _c("form", { attrs: { method: "post", id: "signup_form" } }, [
+                _vm._v("\n                    <\n                    "),
                 _c("div", { staticClass: "tab-content" }, [
                   _c(
                     "div",

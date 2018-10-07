@@ -34,6 +34,7 @@
                         </li>
                     </ul>
                     <form method="post" id="signup_form">
+                        <
                         <div class="tab-content">
 
                             <div id="signup-account" class="tab-pane p-3">
@@ -260,6 +261,12 @@
     }
 
     $(document).ready(function () {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-Token': $('meta[name="csrf_token"]').attr('content')
+            }
+        });
+
         let $signup_finish = $("#signup").find("ul.pager li.finish"),
             $signup_validator = $("#signup form").validate({
                 rules: {
