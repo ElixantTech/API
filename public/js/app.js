@@ -71147,14 +71147,11 @@ $(document).ready(function () {
 
     var deselectPlans = function deselectPlans() {
         $('.select-plan').each(function () {
-            console.log('unselect ' + $(this).attr('id'));
             $(this).text('SELECT');
         });
     };
 
     $('.select-plan').click(function () {
-        console.log('click!');
-
         deselectPlans();
 
         $(this).text('SELECTED');
@@ -71193,37 +71190,38 @@ $(document).ready(function () {
         var street_num = '';
         var street_name = '';
 
-        // Get each component of the address from the place details
-        // and fill the corresponding field on the form.
-        for (var i = 0; i < place.address_components.length; i++) {
+        var resultKeys = {
+            street_number: 'short_name',
+            route: 'long_name',
+            locality: 'long_name',
+            administrative_area_level_1: 'long_name',
+            country: 'long_name',
+            postal_code: 'short_name'
+        };
+
+        var results = {
+            street_number: '',
+            route: '',
+            locality: '',
+            administrative_area_level_1: '',
+            country: '',
+            postal_code: ''
+
+            // Get each component of the address from the place details
+            // and fill the corresponding field on the form.
+        };for (var i = 0; i < place.address_components.length; i++) {
             var addressType = place.address_components[i].types[0];
 
-            if (addressType === 'street_number') {
-                street_num = place.address_components[i]['short_name'];
+            if (resultKeys[addressType]) {
+                results[addressType] = place.address_components[i][resultKeys[addressType]];
             }
-            elseif(addressType === 'route');
-            {
-                street_name = place.address_components[i]['long_name'];
-            }
-            elseif(addressType === 'locality');
-            {
-                $("#city").val(place.address_components[i]['long_name']);
-            }
-            elseif(addressType === 'administrative_area_level_1');
-            {
-                $("#province").val(place.address_components[i]['long_name']);
-            }
-            elseif(addressType === 'country');
-            {
-                $("#country").val(place.address_components[i]['long_name']);
-            }
-            elseif(addressType === 'postal_code');
-            {
-                $("#postal_code").val(place.address_components[i]['long_name']);
-            }
-
-            $("#address").val(street_num + ' ' + street_name);
         }
+
+        $("#address").val(results['street_num'] + ' ' + results['route']);
+        $("#city").val(results['locality']);
+        $("#province").val(results['administrative_area_level_1']);
+        $("#country").val(results['country']);
+        $("#postal_code").val(results['postal_code']);
     }
 });
 
