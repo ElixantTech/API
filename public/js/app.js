@@ -44509,9 +44509,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /* 48 */
 /***/ (function(module, exports) {
 
-var autocomplete;
+var autocomplete, address_autocomplete;
 
-var address_autocomplete = function () {
+address_autocomplete = function () {
     // Create the autocomplete object, restricting the search to geographical
     // location types.
     autocomplete = new google.maps.places.Autocomplete(

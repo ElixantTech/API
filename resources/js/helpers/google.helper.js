@@ -1,6 +1,6 @@
-var autocomplete;
+var autocomplete, address_autocomplete;
 
-var address_autocomplete = function () {
+address_autocomplete = function () {
     // Create the autocomplete object, restricting the search to geographical
     // location types.
     autocomplete = new google.maps.places.Autocomplete(
