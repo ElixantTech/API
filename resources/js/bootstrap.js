@@ -45,6 +45,12 @@ require('nanoscroller');
 require('magnific-popup');
 require('jquery-placeholder');
 require('jquery-validation');
+require('jquery.payment');
+
+// Helpers
+
+require('./helpers/google.helper.js');
+require('./helpers/validation.helpers.js');
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

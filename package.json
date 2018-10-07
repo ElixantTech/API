@@ -31,7 +31,8 @@
         "jquery-placeholder": "^2.3.1",
         "jquery-validation": "^1.18.0",
         "jquery.browser": "^0.1.0",
-        "pusher-js": "^4.3.1"
+        "pusher-js": "^4.3.1",
+        "jquery.payment": "^3.0.0"
     },
     "dependencies": {
         "card-js": "^1.0.13"
