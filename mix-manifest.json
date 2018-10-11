@@ -1,3 +1,5 @@
 {
-    "/public/js/app.js": "/public/js/app.js"
+    "/public/assets/platform/vendor.js": "/public/assets/platform/vendor.js",
+    "/public/assets/platform/app.js": "/public/assets/platform/app.js",
+    "/public/assets/platform/manifest.js": "/public/assets/platform/manifest.js"
 }

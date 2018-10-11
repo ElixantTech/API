@@ -1,43 +1,50 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="header-fixed sidebar-left-sm">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
 
-    <title>{{ config('app.name') }}</title>
+    <title>{{ config('app.name') }} // @yield('page_title', 'Platform')</title>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light"
-          rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {"families":["Montserrat:300,400,500,600,700","Roboto:300,400,500,600,700"]},
+            active: function() {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
 
-    <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('vendor/animate/animate.css') }}">
-
-    <link rel="stylesheet" href="{{ asset('vendor/font-awesome/css/fontawesome-all.min.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('vendor/magnific-popup/magnific-popup.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css') }}"/>
-
-    <!-- Styles -->
-    <link href="{{ asset('css/theme.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/skins/default.css') }}" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/css/bootstrap-formhelpers.css" rel="stylesheet">
-
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <script src="{{ asset('vendor/modernizr/modernizr.js') }}"></script>
+    <link href="{{ asset('assets/vendors/base/vendors.bundle.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/demo/demo4/base/style.bundle.css') }}" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body id="app" style="background-image: {{ url('assets/app/media/img/bg/bg-1.jpg') }}" class="m-page--fluid m-page--loading-enabled m-page--loading m-header--static m-aside-left--enabled m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
 
-<div id="app">
-    @yield('template')
+<div class="m-page-loader m-page-loader--base">
+    <div class="m-spinner m-spinner--brand"></div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js" defer></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAod167Kl2mMa_ryQ6w9UqLib9si-SmzIA&libraries=places"
-        async defer></script>
+<div class="m-grid m-grid--hor m-grid--root m-page">
+    @yield('page')
+</div>
+
+<div id="m_scroll_top" class="m-scroll-top">
+    <i class="la la-arrow-up"></i>
+</div>
+
+<script src="{{ asset('assets/vendors/base/vendors.bundle.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/demo/demo4/base/scripts.bundle.js') }}" type="text/javascript"></script>
+
+<script src="{{ asset('assets/app/js/dashboard.js') }}" type="text/javascript"></script>
+
+<script src="{{ asset('assets/platform/manifest.js') }}"></script>
+<script src="{{ asset('assets/platform/vendor.js') }}"></script>
+<script src="{{ asset('assets/platform/app.js') }}"></script>
 </body>
 </html>
