@@ -15,6 +15,7 @@
           rel="stylesheet" type="text/css">
 
     <!-- Styles -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="{{ asset('css/vendor.bundle.css') }}" rel="stylesheet">
     <link href="{{ asset('css/theme.bundle.css') }}" rel="stylesheet">
 
@@ -30,7 +31,6 @@
     @yield('template')
 </div>
 
-<script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js" defer></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAod167Kl2mMa_ryQ6w9UqLib9si-SmzIA&libraries=places"
         async defer></script>
