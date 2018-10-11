@@ -15,7 +15,4 @@ mix.options({
     publicPath: ("./")
 });
 
-mix.copyDirectory('resources/assets', 'public/assets')
-    .js('resources/js/app.js', 'public/assets/platform')
-    .extract(['vue','jquery','bootstrap','lodash','popper.js','axios','laravel-echo','pusher-js'])
-    .sourceMaps();
+mix.js('resources/js/app.js', 'public/js');

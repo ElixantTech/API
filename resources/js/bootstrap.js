@@ -37,6 +37,16 @@ if (token) {
     console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
 
+window.browser = require('jquery-browser');
+require('popper.js');
+require('bootstrap-datepicker');
+require('common');
+require('nanoscroller');
+require('magnific-popup');
+require('jquery-placeholder');
+require('jquery-validation');
+require('jquery.payment');
+
 // Helpers
 
 require('./helpers/google.helper.js');
@@ -58,3 +68,6 @@ window.Echo = new Echo({
     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
     encrypted: true
 });
+
+require('./theme');
+require('./theme.init');
