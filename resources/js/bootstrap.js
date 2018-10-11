@@ -51,6 +51,7 @@ require('jquery.payment');
 
 require('./helpers/google.helper.js');
 require('./helpers/validation.helpers.js');
+require('./vendor/modernizr/modernizr.js');
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

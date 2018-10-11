@@ -14,21 +14,15 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light"
           rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('vendor/animate/animate.css') }}">
-
-    <link rel="stylesheet" href="{{ asset('vendor/font-awesome/css/fontawesome-all.min.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('vendor/magnific-popup/magnific-popup.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css') }}"/>
-
     <!-- Styles -->
-    <link href="{{ asset('css/theme.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/skins/default.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/vendor.bundle.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/theme.bundle.css') }}" rel="stylesheet">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/css/bootstrap-formhelpers.css" rel="stylesheet">
 
+    <script src="{{ asset('js/vendor.js') }}"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <script src="{{ asset('vendor/modernizr/modernizr.js') }}"></script>
+    <script src="{{ asset('js/manifest.js') }}"></script>
 </head>
 <body>
 
