@@ -19,7 +19,7 @@ mix
     .styles([
         'resources/js/vendor/bootstrap/css/bootstrap.css',
         'resources/js/vendor/animate/animate.css',
-        'resources/js/vendor/font-awesome/css/fontawesome-all.min.css',
+        'node_modules/font-awesome/css/font-awesome.css',
         'resources/js/vendor/magnific-popup/magnific-popup.css',
         'resources/js/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css'
     ], 'public/css/vendor.bundle.css')
