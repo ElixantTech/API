@@ -16,23 +16,9 @@ mix.options({
 });
 
 mix
-    .styles([
-        'resources/js/vendor/bootstrap/css/bootstrap.css',
-        'resources/js/vendor/animate/animate.css',
-        'resources/js/vendor/magnific-popup/magnific-popup.css',
-        'resources/js/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css'
-    ], 'public/css/vendor.bundle.css')
-    .styles([
-        'resources/css/app.css',
-        'resources/css/theme.css',
-        'resources/css/theme-admin-extension.css',
-        'resources/css/invoice-print.css',
-        'resources/css/pricing-table.css',
-        'resources/css/skins/default.css',
-        'resources/css/skins/extension.css',
-        'resources/css/custom.css',
-    ], 'public/css/theme.bundle.css')
-    .js('resources/js/app.js', 'public/js')
-    .extract(['vue','jquery','bootstrap','pusher-js','laravel-echo','popper.js','jquery-browser','bootstrap-datepicker','common','nanoscroller',
-    'magnific-popup','jquery-placeholder','jquery-validation','jquery.payment'])
+    .js('resources/js/platform.js', 'public/assets/js')
+    .sass('resources/sass/combined.scss', 'public/assets/css/platform.css')
+
+    .extract(['vue','jquery','bootstrap','pusher-js','laravel-echo','popper.js','common','nanoscroller',
+        'magnific-popup','jquery-placeholder','jquery-validation'])
     .sourceMaps();
