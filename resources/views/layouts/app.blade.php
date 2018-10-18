@@ -18,9 +18,9 @@
 <body id="platform">
     <Platform />
 
-    <script src="{{ asset('assets/vendors/vendors.bundle.js') }}" />
-    <script src="{{ asset('assets/app/app.bundle.js') }}" />
+    <script src="{{ asset('assets/vendors/vendors.bundle.js') }}"></script>
+    <script src="{{ asset('assets/app/app.bundle.js') }}"></script>
 
-    <script src="{{ asset('assets/platform/platform.js') }}" />
+    <script src="{{ asset('assets/platform/platform.js') }}"></script>
 </body>
 </html>
