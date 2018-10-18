@@ -11082,22 +11082,11 @@ window.Vue = __webpack_require__(2);
  */
 Vue.component("Platform", __webpack_require__(3));
 
-var data = {
-  navbar_height: null,
-  shortcut_dropdown: $('#ahortcut'),
-  bread_crumb: $('#ribbon ol.breadcrumb'),
-  topmenu: false,
-  thisDevice: null,
-  isMobile: /iphone|ipad|ipod|android|blackberry|mini|windows\sve|palm/i.test(navigator.userAgent.toLowerCase()),
-  jsArray: {}
-};
-
 /**
  * Initialize Vue
  */
 var platform = new Vue({
-  el: "#platform",
-  data: data
+  el: "#platform"
 });
 
 /*
@@ -11142,22 +11131,11 @@ window.Vue = __webpack_require__(2);
  */
 Vue.component("Platform", __webpack_require__(3));
 
-var data = {
-  navbar_height: null,
-  shortcut_dropdown: $('#ahortcut'),
-  bread_crumb: $('#ribbon ol.breadcrumb'),
-  topmenu: false,
-  thisDevice: null,
-  isMobile: /iphone|ipad|ipod|android|blackberry|mini|windows\sve|palm/i.test(navigator.userAgent.toLowerCase()),
-  jsArray: {}
-};
-
 /**
  * Initialize Vue
  */
 var platform = new Vue({
-  el: "#platform",
-  data: data
+  el: "#platform"
 });
 
 /*
