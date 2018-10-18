@@ -14,13 +14,13 @@
 
     <link rel="stylesheet" media="screen, print" href="{{ asset('assets/vendors/vendors.bundle.css') }}">
     <link rel="stylesheet" media="screen, print" href="{{ asset('assets/app/app.bundle.css') }}">
-
-    <script src="{{ asset('assets/platform/platform.js') }}" defer />
 </head>
 <body id="platform">
     <Platform />
 
-    <script src="{{ asset('assets/vendors/vendors.bundle.js') }}"></script>
-    <script src="{{ asset('assets/app/app.bundle.js') }}"></script>
+    <script src="{{ asset('assets/vendors/vendors.bundle.js') }}" />
+    <script src="{{ asset('assets/app/app.bundle.js') }}" />
+
+    <script src="{{ asset('assets/platform/platform.js') }}" />
 </body>
 </html>
