@@ -21,14 +21,14 @@
     }
 
     #logo.default {
-        background-image: url("../../media/logo.png");
+        background-image: url("../../../public/assets/img/logo.png");
     }
 
     #logo.square  {
-        background-image: url("../../media/logo-square.png");
+        background-image: url("../../../public/assets/img/logo-square.png");
     }
 
     #logo.small {
-        background-image: url("../../media/logo-small.png");
+        background-image: url("../../../public/assets/img/logo-small.png");
     }
 </style>

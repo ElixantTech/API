@@ -1,25 +1,23 @@
-@extends('layouts.base')
+<!DOCTYPE html>
 
-@section('template')
-    <section class="body" id="app">
+<html lang="{{ App::getLocale() }}" class="smart-style-2">
+<head>
+    <title>Elixant Platform // @yield('title', 'Dashboard')</title>
 
-        @include('layouts.app-header')
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,500,700">
 
-        <div class="inner-wrapper">
+    <link rel="shortcut icon" href="{{ asset('assets/img/favicon/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('assets/img/favicon/favicon.ico') }}" type="image/x-icon">
 
-            <aside id="sidebar-left" class="sidebar-left">
-                @include('layouts.app-sidebar-left')
-            </aside>
+    <link rel="stylesheet" media="screen, print" href="{{ asset('assets/vendors/vendors.bundle.css') }}">
+    <link rel="stylesheet" media="screen, print" href="{{ asset('assets/app/app.bundle.css') }}">
 
-            <section role="main" class="content-body">
-
-                <main class="py-4">
-                    @yield('content')
-                </main>
-
-            </section>
-
-        </div>
-
-    </section>
-@endsection
+    <script src="{{ asset('assets/platform/platform.js' }}" defer />
+</head>
+<body id="platform">
+    <Platform />
+</body>
+</html>

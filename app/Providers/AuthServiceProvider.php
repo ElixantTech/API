@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Passport;
 use App\Services\Auth\JwtGuard;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
@@ -27,6 +28,11 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
     
+    
+        Passport::routes();
+        Passport::tokensExpireIn(now()->addDays(15));
+        Passport::refreshTokensExpireIn(now()->addDays(30));
+        
         Auth::extend('jwt', function ($app, $name, array $config) {
             // Return an instance of Illuminate\Contracts\Auth\Guard...
         

@@ -1,12 +1,14 @@
 <template>
-    <BaseHeader />
+    <div class="sa-wrapper">
+
+    </div>
 </template>
 
 <script>
-    import BaseHeader from "./components/Header/BaseHeader";
-
     export default {
         name: "Platform",
-        components: {BaseHeader}
+        data: function () {
+            return {}
+        }
     }
 </script>

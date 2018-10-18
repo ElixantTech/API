@@ -16,9 +16,4 @@ mix.options({
 });
 
 mix
-    .js('resources/js/platform.js', 'public/assets/js')
-    .sass('resources/sass/combined.scss', 'public/assets/css/platform.css')
-
-    .extract(['vue','jquery','bootstrap','pusher-js','laravel-echo','popper.js','common','nanoscroller',
-        'magnific-popup','jquery-placeholder','jquery-validation'])
-    .sourceMaps();
+    .js('resources/js/platform.js', 'public/assets/platform/platform.js');
