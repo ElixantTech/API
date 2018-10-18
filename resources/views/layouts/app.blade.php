@@ -16,7 +16,7 @@
     <link rel="stylesheet" media="screen, print" href="{{ asset('assets/app/app.bundle.css') }}">
 </head>
 <body id="platform">
-    <Platform />
+    <Platform></Platform>
 
     <script src="{{ asset('assets/vendors/vendors.bundle.js') }}"></script>
     <script src="{{ asset('assets/app/app.bundle.js') }}"></script>
