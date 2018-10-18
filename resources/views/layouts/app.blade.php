@@ -15,7 +15,7 @@
     <link rel="stylesheet" media="screen, print" href="{{ asset('assets/vendors/vendors.bundle.css') }}">
     <link rel="stylesheet" media="screen, print" href="{{ asset('assets/app/app.bundle.css') }}">
 
-    <script src="{{ asset('assets/platform/platform.js' }}" defer />
+    <script src="{{ asset('assets/platform/platform.js') }}" defer />
 </head>
 <body id="platform">
     <Platform />
