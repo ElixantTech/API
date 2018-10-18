@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use Passport;
-use App\Services\Auth\JwtGuard;
+use Laravel\Passport\Passport;
+//use App\Services\Auth\JwtGuard;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -33,10 +33,10 @@ class AuthServiceProvider extends ServiceProvider
         Passport::tokensExpireIn(now()->addDays(15));
         Passport::refreshTokensExpireIn(now()->addDays(30));
         
-        Auth::extend('jwt', function ($app, $name, array $config) {
-            // Return an instance of Illuminate\Contracts\Auth\Guard...
-        
-            return new JwtGuard(Auth::createUserProvider($config['provider']));
-        });
+        //Auth::extend('jwt', function ($app, $name, array $config) {
+        //    // Return an instance of Illuminate\Contracts\Auth\Guard...
+        //
+        //    return new JwtGuard(Auth::createUserProvider($config['provider']));
+        //});
     }
 }
