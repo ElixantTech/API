@@ -20120,8 +20120,12 @@ var OBSERVER_CONFIG = {
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    name: "app"
-});
+    name: "app",
+    data: function data() {
+        return {
+            version: "0.1.1-dev"
+        };
+    } });
 
 /***/ }),
 /* 74 */

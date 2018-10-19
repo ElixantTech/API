@@ -6,6 +6,10 @@
 
 <script>
     export default {
-        name: "app"
-    }
+        name: "app",
+        data: function () {
+            return {
+                version: "0.1.1-dev"
+            }
+        }}
 </script>
