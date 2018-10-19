@@ -22,6 +22,4 @@ mix
         'resources/assets/app/vendors.bundle.css',
         'resources/assets/app/theme.css',
         'resources/assets/app/platform.css'
-    ],  'public/assets/app/app.bundle.css')
-    .autoExtract()
-    .sourceMaps();
+    ],  'public/assets/app/app.bundle.css');
