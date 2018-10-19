@@ -6,9 +6,6 @@
 
 <script>
     export default {
-        name: "Platform",
-        data: function () {
-            return {}
-        }
+        name: "Platform"
     }
 </script>

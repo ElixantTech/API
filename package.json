@@ -9,13 +9,16 @@
         "prod": "npm run production",
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
-    "dependencies": {
+    "devDependencies": {
+        "npm": "^6.4.1",
         "axios": "^0.18",
+        "bootstrap": "^4.0.0",
         "cross-env": "^5.1",
+        "jquery": "^3.2",
         "laravel-mix": "^2.0",
         "lodash": "^4.17.5",
+        "popper.js": "^1.12",
         "vue": "^2.5.7",
-        "vue-storage": "^0.0.7",
         "laravel-echo": "1.4.0",
         "pnotify": "^4.0.0-alpha.4",
         "pusher-js": "^4.3.1",
