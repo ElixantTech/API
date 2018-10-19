@@ -20,13 +20,14 @@ Vue.use(Vuex);
 /**
  * Load Global Components
  */
-Vue.component("Platform", require("./components/Platform"));
+import Platform from './components/Platform'
 
 /**
  * Initialize Vue
  */
 const app = new Vue({
-    el: "#app"
+    el: "#app",
+    components: { Platform }
 });
 
 /*
