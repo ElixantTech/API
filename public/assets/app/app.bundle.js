@@ -20120,7 +20120,7 @@ var OBSERVER_CONFIG = {
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    name: "Platform"
+    name: "App"
 });
 
 /***/ }),

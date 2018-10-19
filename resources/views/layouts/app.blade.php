@@ -18,11 +18,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/app/app.bundle.css') }}">
     <script src="{{ asset('assets/app/app.bundle.js') }}" defer></script>
 </head>
-<body>
+<body id="app">
 
-    <div id="app">
-        <Platform></Platform>
-    </div>
+<App></App>
 
 </body>
 </html>

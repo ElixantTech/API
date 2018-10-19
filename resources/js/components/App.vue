@@ -6,6 +6,6 @@
 
 <script>
     export default {
-        name: "Platform"
+        name: "App"
     }
 </script>
