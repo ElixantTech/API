@@ -19,7 +19,7 @@
 </head>
 <body>
 
-    <div id="platform">
+    <div id="app">
         <Platform></Platform>
     </div>
 
