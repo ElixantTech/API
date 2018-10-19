@@ -20,13 +20,13 @@ Vue.use(Vuex);
 /**
  * Load Global Components
  */
-Vue.component("App", require("./components/App"));
+Vue.component("app", require("./components/App"));
 
 /**
  * Initialize Vue
  */
 const app = new Vue({
-    el: "#app"
+    el: "#platform"
 });
 
 /*
