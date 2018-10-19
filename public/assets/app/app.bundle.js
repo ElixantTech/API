@@ -20120,7 +20120,7 @@ var OBSERVER_CONFIG = {
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    name: "App"
+    name: "app"
 });
 
 /***/ }),
@@ -20161,13 +20161,13 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_2_vuex__["a" /* default */]);
 /**
  * Load Global Components
  */
-Vue.component("App", __webpack_require__(220));
+Vue.component("app", __webpack_require__(220));
 
 /**
  * Initialize Vue
  */
 var app = new Vue({
-  el: "#app"
+  el: "#platform"
 });
 
 /*
