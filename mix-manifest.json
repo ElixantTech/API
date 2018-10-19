@@ -1,3 +1,6 @@
 {
-    "/public/assets/platform/platform.js": "/public/assets/platform/platform.js"
+    "/js/vendor.js": "/js/vendor.js",
+    "/public/assets/app/app.bundle.js": "/public/assets/app/app.bundle.js",
+    "/js/manifest.js": "/js/manifest.js",
+    "/public/assets/app/app.bundle.css": "/public/assets/app/app.bundle.css"
 }

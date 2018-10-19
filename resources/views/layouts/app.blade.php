@@ -15,7 +15,6 @@
     <link rel="shortcut icon" href="{{ asset('assets/img/favicon/favicon.ico') }}" type="image/x-icon">
     <link rel="icon" href="{{ asset('assets/img/favicon/favicon.ico') }}" type="image/x-icon">
 
-    <link rel="stylesheet" media="screen, print" href="{{ asset('assets/vendors/vendors.bundle.css') }}">
     <link rel="stylesheet" media="screen, print" href="{{ asset('assets/app/app.bundle.css') }}">
 </head>
 <body>
@@ -24,9 +23,8 @@
         <Platform></Platform>
     </div>
 
-    <script src="{{ asset('assets/vendors/vendors.bundle.js') }}"></script>
+    <script src="{{ asset('assets/app/js/manifest.js') }}"></script>
+    <script src="{{ asset('assets/app/js/vendor.js') }}"></script>
     <script src="{{ asset('assets/app/app.bundle.js') }}"></script>
-
-    <script src="{{ asset('assets/platform/platform.js') }}"></script>
 </body>
 </html>
